@@ -191,8 +191,8 @@ class TomatoChatMessenger
      */
     public function fetchMessagesQuery($user_id): mixed
     {
-        return Message::where('from_id', Auth::user()->id)->where('to_id', $user_id)
-                    ->orWhere('from_id', $user_id)->where('to_id', Auth::user()->id);
+            return Message::where('from_id', Auth::user()->id)->where('to_id', $user_id)
+                        ->orWhere('from_id', $user_id)->where('to_id', Auth::user()->id);
     }
 
     /**
